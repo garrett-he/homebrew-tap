@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 cask "example-app" do
   version "1.2.3"
   sha256 "REPLACE_WITH_SHA256"
@@ -14,6 +16,7 @@ cask "example-app" do
 
   auto_updates false
   conflicts_with cask: "example-app-beta"
+
   # depends_on macos: :monterey
   # depends_on formula: "unar"
 

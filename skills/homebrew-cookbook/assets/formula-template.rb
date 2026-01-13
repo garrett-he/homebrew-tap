@@ -1,12 +1,13 @@
+# frozen_string_literal: true
+
 class Foo < Formula
   desc "One-line description (do not repeat the formula name)"
   homepage "https://example.com/foo"
   url "https://example.com/foo-1.2.3.tar.gz"
-  sha256 "REPLACE_WITH_SHA256"
+  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
   license "MIT" # SPDX identifier, e.g. MIT, BSD-2-Clause, Apache-2.0
 
-  # Add dependencies required at build or test time.
-  # depends_on "pkgconf" => :build
+  # Add dependencies required at build or test time, e.g.:
   # uses_from_macos "bzip2"
 
   def install

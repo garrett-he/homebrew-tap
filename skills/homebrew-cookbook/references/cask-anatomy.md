@@ -121,12 +121,12 @@ Prefer HTTPS. Extra downloader parameters:
 
 ```ruby
 url "https://example.com/app.dmg",
-    using:       :post,
-    cookies:     { "key" => "value" },
-    referer:     "https://example.com/download",
-    header:      "Authorization: Bearer ...",
-    user_agent:  :fake,
-    data:        { "key" => "value" }
+    using:      :post,
+    cookies:    { "key" => "value" },
+    referer:    "https://example.com/download",
+    header:     "Authorization: Bearer ...",
+    user_agent: :fake,
+    data:       { "key" => "value" }
 ```
 
 `using:` accepts `:post`, `:homebrew_curl`, `:svn`, `:git`. Git URLs ending in `.git` also accept `tag:`, `revision:`, `branch:`, `only_path:`. Subversion URLs accept `revision:` and `trust_cert: true`. Find a browser-hidden URL with `mdls -name kMDItemWhereFroms '<file>'`. URLs that rotate on every visit or block command-line clients are not usable.
@@ -163,7 +163,7 @@ Every cask needs a version source that `livecheck` can check by default, or an e
 
 ```ruby
 livecheck do
-  url :url          # or :homepage, or a literal URL
+  url :url # or :homepage, or a literal URL
   strategy :sparkle
 end
 ```

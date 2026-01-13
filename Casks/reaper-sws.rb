@@ -14,8 +14,7 @@ cask "reaper-sws" do
              target: "~/Library/Application Support/REAPER/UserPlugins/reaper_sws-x86_64.dylib"
   end
 
-  url "https://sws-extension.org/download/featured/sws-#{version}-Darwin-#{arch}.dmg",
-      verified: "sws-extension.org/download/featured/"
+  url "https://sws-extension.org/download/featured/sws-#{version}-Darwin-#{arch}.dmg"
   name "SWS Extension"
   desc "Extension for the REAPER digital audio workstation"
   homepage "https://sws-extension.org/"
@@ -26,6 +25,7 @@ cask "reaper-sws" do
   end
 
   depends_on cask: "reaper"
+  depends_on :macos
 
   artifact "sws_python.py",
            target: "~/Library/Application Support/REAPER/Scripts/sws_python.py"

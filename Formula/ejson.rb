@@ -14,6 +14,17 @@ class Ejson < Formula
     end
   end
 
+  on_linux do
+    on_arm do
+      url "https://github.com/Shopify/ejson/releases/download/v1.6.0/ejson_1.6.0_linux_arm64.tar.gz"
+      sha256 "5f83e72c96b6cd22a3f2f67b3ff8e0a2b26872cc3eac2db7e4731562d4d0b06b"
+    end
+    on_intel do
+      url "https://github.com/Shopify/ejson/releases/download/v1.6.0/ejson_1.6.0_linux_amd64.tar.gz"
+      sha256 "354d17e0c05bcb26d64a68205a615750f3504f3ed035f0d7b962f2d0eebcf023"
+    end
+  end
+
   def install
     bin.install "ejson"
   end

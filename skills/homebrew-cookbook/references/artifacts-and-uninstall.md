@@ -73,11 +73,11 @@ Required in practice for every `pkg` or `installer` cask; usually unnecessary fo
 11. `rmdir:`
 
 ```ruby
-uninstall quit:       "com.example.app",
-          launchctl:  "com.example.helper",
-          pkgutil:    "com.example.pkg.*",
-          trash:      "~/Library/Application Support/Example",
-          rmdir:      "~/Library/Example"
+uninstall launchctl: "com.example.helper",
+          quit:      "com.example.app",
+          pkgutil:   "com.example.pkg.*",
+          trash:     "~/Library/Application Support/Example",
+          rmdir:     "~/Library/Example"
 ```
 
 - `pkgutil:` is the most useful key; accepts strings, regexps, or arrays of both. Strongly preferred over `delete:`.
